@@ -1,0 +1,904 @@
+body {
+	font-family: Helvetica Neue;
+	font-size: 12px;
+	margin: 0px;
+    padding: 0px;
+}
+
+body.grid {
+    background-color: #323232;
+}
+
+body.large-view {
+    background-color: #161616;
+}
+
+#banner {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 66px;
+    height: 140px;
+    display: block;
+}
+
+/* The black header at the top. */
+#header {
+	background-color: #242524;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .4);
+	width: 100%;
+	height: 46px;
+	position: fixed;
+	z-index: 9;
+	display: table;
+	padding: 0px;
+	top: 0px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#print-subscriber-login, #subscribe  {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-top: 13px;
+    margin-left: 15px;
+}
+
+#header-left-column-container {
+    width: 200px;
+    height: 46px;
+    float: left;
+}
+
+#title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 400px;
+    display: block;
+    margin: auto;
+    padding-top: 14px;
+}
+
+#title-image {
+    display:block;
+    margin: 0 auto;
+    position: relative;
+    left: -100px;
+}
+
+/* The text link to display more folios in grid view. */
+#show-more {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 10px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    clear: both;
+    white-space: none;
+}
+
+/* The button bar used to toggle between one-up and grid view. */
+.navbar {
+	white-space:nowrap;
+	vertical-align: middle;
+	display: table-cell;
+    display: inline;
+    position: absolute;
+    right: 55px;
+    top: 8px;
+}
+
+#header-drop-down {
+    float: right;
+    margin-left: 15px;
+    display: inline;
+    position: absolute;
+    right: 15px;
+    top: 2px;
+}
+
+.navbar div {
+	display: inline-block;
+}
+
+/* The off state icon of the one-up view button. */
+.view-toggle-big-off {
+	background: url("images/view_toggle_big_off.png") no-repeat;
+	background-size: 46px 29px;
+	width: 46px;
+	height: 29px;
+}
+
+/* The selected state icon of the one-up view button. */
+.view-toggle-big-on {
+	background: url("images/view_toggle_big_on.png") no-repeat;
+	background-size: 46px 29px;
+	width: 46px;
+	height: 29px;
+}
+
+/* The off state icon of the grid view button. */
+.view-toggle-grid-off {
+	background: url("images/view_toggle_grid_off.png") no-repeat;
+	background-size: 46px 29px;
+	width: 46px;
+	height: 29px;
+}
+
+/* The selected state icon of the grid view button. */
+.view-toggle-grid-on {
+	background: url("images/view_toggle_grid_on.png") no-repeat;
+	background-size: 46px 29px;
+	width: 46px;
+	height: 29px;
+}
+
+.button {
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 7px;
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.grey-button {
+	width: 97px;
+    height: 15px;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#595b5b;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.grey-button:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+.grey-button-small {
+    width: 70px;
+    height: 15px;
+    float: left;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#595b5b;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.grey-button-small:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+.black-button-small {
+    width: 70px;
+    height: 15px;
+    display: none;
+    float: left;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#393939;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.black-button-small:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+#edit-button {
+	white-space:nowrap;
+	float: right;
+	margin-top: 8px;
+}
+
+.toggle-button {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 6px;
+	width: 69px;
+	height: 26px;
+}
+
+/* The icon to open the drop down. */
+.drop-down {
+	background: url("images/button_drop_down.png") no-repeat;
+	width: 24px;
+	height: 23px;
+	margin-top: 9px;
+}
+
+.drop-down div {
+	display: none;
+}
+
+.drop-down-menu {
+	position: absolute;
+	z-index: 10;
+}
+
+.drop-down-menu-background {
+	-webkit-box-shadow: 0px 3px 40px rgba(0,0,0,0.4);
+	-webkit-border-radius: 8px;
+	background-color: #1A1A1A;
+	padding: 5px;
+	position: relative;
+	top: -4px;
+}
+
+.drop-down-menu-inner-background {
+	background-color: #4f4f4f;
+}
+
+.drop-down-menu-inner-background .item {
+	height: 30px;
+	padding: 10px 10px 0px 15px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.drop-down-menu-inner-background .selected {
+	background-color: #3E3E3E;
+	color: #33ccff;
+}
+
+.drop-down-menu-inner-background hr {
+	height: 1px;
+	color: #1a1a1a;
+	background-color: #1a1a1a;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.drop-down-menu-inner-background .flip-switch {
+	float: right;
+}
+
+.drop-down-menu-inner-background .control-label {
+	padding-top: 3px;
+	float: left;
+}
+
+/* Horizontal switch with on/off states. */
+.flip-switch {
+	background: url("images/flip_switch_bg.png") no-repeat;
+	background-size: 135px 27px;
+	width: 90px;
+	height: 27px;
+	-webkit-transition: background-position .15s;
+}
+
+/* Item renderer used to display an individual folio in the grid. */
+.folio-item-view {
+	float: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 30px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.folio-item-view img {
+	float: left;
+	-webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, .1);
+	margin-right: 20px;
+}
+
+.folio-item-view .text {
+	display: inline;
+    width: 350px;
+}
+
+.folio-item-view #buy-button {
+	float: left;
+}
+
+.folio-item-view #subscribe-button {
+	float: left;
+	position: relative;
+	top: 3px;
+}
+
+.folio-item-view .download-status {
+	width: 176px;
+	height: 6px;
+	margin: 6px 0px 12px 0px;
+	position: relative;
+}
+
+.magazine-title {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.folio-number {
+    color: #999999;
+    font-size: 12px;
+}
+
+.state {
+    color: #33ccff;
+    font-size: 12px;
+}
+
+.folio-item-view .magazine-title {
+	line-height: 120%;
+}
+
+.folio-item-view .state {
+	height: 20px;
+}
+
+.folio-item-view .grey-button-small {
+	margin-left: 5px;
+}
+
+/* The background track of the download status. */
+.folio-item-view .progress-track {
+	width: 176px;
+}
+
+/* Container that holds the one-up view. */
+#large-view-wrapper {
+	overflow: hidden;
+	position: fixed; /* Need to set fixed otherwise this will scroll if a textfield causes the window to scroll when it has focus. */
+}
+
+/* Item renderer for individual folios in one-up view. */
+.large-folio-item-view  {
+    color: #ffffff;
+	position: absolute;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	top: 86px;
+}
+
+.large-folio-item-view .row {
+	white-space: nowrap;
+	-webkit-transition: opacity .1s ease-out;
+}
+
+.large-folio-item-view .magazine-title {
+	font-weight: bold;
+}
+
+.large-folio-item-view .folio-number {
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.large-folio-item-view .black-button {
+	margin: 10px 0px 0px 0px;
+	float: none;
+	clear: both;
+}
+
+.large-folio-item-view .left {
+	float: left;
+	width: 50%;
+	margin-top: 10px;
+}
+
+.large-folio-item-view .right {
+	float: right;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.large-folio-item-view .state {
+	font-weight: bold;
+	height: 20px;
+}
+
+.large-folio-item-view .off-fade {
+	background-color: #000000;
+	-webkit-transition: opacity .1s ease-out;
+	position: absolute;
+	z-index: 9;
+	top: 0px;
+	left: 0px;
+}
+
+.large-folio-item-view .button {
+	font-size: 14px;
+	padding-top: 5px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.large-folio-item-view .button-row {
+	white-space: nowrap;
+}
+
+.large-folio-item-view .download-status {
+	width: 183px;
+	height: 22px;
+	position: relative;
+	top: 10px;
+}
+
+/* The background track of the download status. */
+.large-folio-item-view .progress-track {
+	width: 200px;
+	float: right;
+	margin-top: 5px;
+}
+
+.progress-track {
+	background-color: #2a2a2a;
+	height: 6px;
+}
+
+.progress-track .progress-bar {
+	background-color: #33CCFF;
+	height: 6px;
+}
+
+.modal-background {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9;
+}
+
+.modal-background-grey {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .3);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9;
+}
+
+#restore-dialog, #update-dialog {
+	margin-left: -127px;
+}
+
+/* Styles for the dialogs. */
+.dialog {
+    position: fixed;
+    width: 240px;
+    padding: 10px 10px 10px 10px;
+    z-index: 10;
+	background: rgba(10, 24, 59, .9);
+    color: #FFFFFF;
+    text-align: center;
+    border: 2px solid #DEE1E6;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    opacity: .92;
+    left: 50%;
+    top: 200px;
+}
+
+.dialog #title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align:left;
+    font-weight: bold;
+    text-align: center;
+    width: 330px;
+}
+
+.dialog #description {
+    font-size: 14px;
+    margin: 0px 0px 20px;
+    text-align:left;
+    text-align: center;
+    line-height: 120%;
+}
+
+.dialog button {
+    color: #fff;
+    width:110px;
+    height: 35px;
+    font-style: bold;
+    white-space: nowrap;
+    text-align: center;
+    font: bold 16px;
+    letter-spacing: 0.05em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #233854;
+    background: -webkit-gradient(linear, left top, left bottom, from(#969db0),to(#0A183B));
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .7);
+    padding: 0px;
+    margin: 0px 5px 0px 5px;
+    opacity: 1.0;
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.dialog button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0A183B),to(#969db0));
+}
+
+#subscribe-dialog {
+	width: 330px;
+	margin-left: -177px;
+	top: 150px;
+}
+
+#subscribe-dialog #description {
+	text-align: left;
+}
+
+#subscribe-dialog .subscribe-button {
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee),to(#C5C6CE));
+    padding: 5px;
+    margin: 12px 2px 4px 1px;
+    color:#000000;
+    font-weight:bold;
+    font-size:16px;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    opacity: 1.0;
+    display:block;
+    width: 315px;
+    height: 21px;
+}
+
+#subscribe-dialog .subscribe-button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#C5C6CE),to(#eeeeee));
+}
+
+#subscribe-dialog button {
+    color: #fff;
+    width:100%;
+    font: bold 16px;
+    letter-spacing: 0.05em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #233854;
+    background: -webkit-gradient(linear, left top, left bottom, from(#969db0),to(#0A183B));
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .7);
+    padding: 5px 25px;
+    min-width: 100px;
+    margin: 0;
+    opacity: 1.0;
+	margin-top: 15px;
+}
+
+#subscribe-dialog button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0A183B),to(#969db0));
+}
+
+/* The login dialog. */
+#login {
+	width: 410px;
+	position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    top: 150px;
+	background-color: #333333;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+	color: #ffffff;
+}
+
+#login .title {
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: #272727;
+	height: 37px;
+	padding-top: 23px;
+}
+
+#login #close {
+	background: url("images/icon_close.png") no-repeat;
+	background-size: 50px 50px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 7px;
+	right: 12px;
+}
+
+#login .description {
+	font-size: 13px;
+	margin: 15px 0px 20px 20px;
+	color: #999999;
+}
+
+#login .link {
+	margin: 5px 0px 20px 20px;
+    color: #33CCFF;
+    text-decoration: none;
+}
+
+input[type="text"], input[type="password"] {
+	-webkit-appearance: none;
+	background-color: #333433;
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	border-width: 1px;
+	color: #ffffff;
+	font-size: 12px;
+	outline-color: black;
+	outline-style: none;
+	outline-width: 0px;
+	padding: 0px 4px 4px 4px;
+	margin-left: 20px;
+	width: 370px;
+	height: 31px;
+	-webkit-appearance: none;
+	margin: 0px 0px 15px 20px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+#login .required {
+	position: relative;
+	top: -5px;
+	left: 3px;
+}
+
+#login #submit {
+    background: url("images/button_sign_in.png") no-repeat;
+    width: 370px;
+    height: 26px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 10px
+}
+
+#login #submit:active {
+    background-position: 0px -36px;
+}
+
+#login .error {
+	color: rgb(255,0,0);
+	font-size: 13px;
+	font-weight: bold;
+    margin: 10px 10px 10px 20px;
+    height: 15px;
+}
+
+.form-button {
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+	width:123px;
+	height:30px;
+	border-color:rgb(51,51,51);
+	border-width:1px;
+	border-radius:4%/12%;
+	border-style:solid;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 9px;
+}
+
+#loading {
+	margin: 10px;
+	color: #ffffff;
+	text-shadow: 0px 1px 0px rgb(0,0,0);
+	font-size: 17px;
+}
+
+@media screen and (orientation:portrait) {
+    #banner {
+        background: url("images/entitlement_banner_portrait.png") no-repeat;
+        background-size: 708px 140px;
+        width: 708px;
+    }
+
+	#subscription-tile {
+        background-size: 331px 180px;
+		width: 354px;
+		height: 220px;
+		background: url("images/subscription_tile_portrait.png") no-repeat;
+	}
+	
+	#grid {
+		width: 768px;
+	}
+	
+	.folio-item-view {
+		width: 354px;
+		height: 222px;
+	}
+	
+	.folio-item-view .download-status {
+		left: 155px;
+	}
+	
+	.folio-item-view img {
+		width: 135px;
+		height: 180px;
+	}
+	
+	.large-folio-item-view img {
+		width: 520px;
+		height: 693px;
+	}
+	
+	.large-folio-item-view .off-fade {
+		width: 520px;
+		height: 693px;
+	}
+	
+	#large-view-wrapper {
+		width: 768px;
+		height: 916px;
+	}
+	
+	/* Container that holds the folio items in one-up view. */
+	#large-view {
+		width: 768px;
+		height: 916px;
+	}
+}
+
+@media screen and (orientation:landscape) {
+    #banner {
+        background: url("images/entitlement_banner_landscape.png") no-repeat;
+        background-size: 964px 140px;
+        width: 964px;
+    }
+    
+	#subscription-tile {
+        background-size: 463px 135px;
+		width: 478px;
+		height: 135px;
+		background: url("images/subscription_tile_landscape.png") no-repeat;
+	}
+	
+	#grid {
+		width: 1024px;
+	}
+	
+	.folio-item-view {
+		width: 478px;
+		height: 177px;
+	}
+	
+	.folio-item-view .download-status {
+		left: 122px;
+	}
+	
+	.folio-item-view img {
+		width: 102px;
+		height: 135px;
+	}
+	
+	.large-folio-item-view img {
+		width: 367px;
+		height: 490px;
+	}
+	
+	.large-folio-item-view .folio-image-container {
+		background-color: #333333;
+		width: 653px;
+		height: 490px;
+		text-align: center;
+	}
+	
+	.large-folio-item-view .off-fade {
+		width: 653px;
+		height: 490px;
+	}
+	
+	#large-view-wrapper {
+		width: 1024px;
+		height: 663px;
+	}
+	
+	/* Container that holds the folio items in one-up view. */
+	#large-view {
+		width: 1024px;
+		height: 663px;
+	}
+}
+
+.nav-status {
+	color: #9a9a9a;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	width: 80px;
+	bottom: 10px;
+}
+
+/* The grid view of folios. */
+#grid {
+	padding-top: 44px;
+	margin-top: 0px;
+}
+
+/* The subscription tile that is displayed in the grid. */
+#subscription-tile {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+.iframe-container {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:99999;
+    background-color:#ffffff;
+}
+
+.iframe-header {
+    height: 50px;
+    background-color:#333333;
+    width:100%;
+    position: fixed;
+}
+
+.iframe-container button {
+    height:25px;
+    margin: 12px;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #bfbfbf) );
+    background-color:#ededed;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#777777;
+    font-family:arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:3px 10px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+}
+
+.iframe-container button:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bfbfbf), color-stop(1, #dfdfdf) );
+}
+
+iframe {
+    border:none;
+    width:100%;
+    height:100%;
+    background-color:#ffffff;
+    margin-top:0px;
+}
+
+.external-link-iframe {
+    margin-top: 50px;
+}
+
+/* The styles for the debug textarea. This is commented out in appview. */
+.debug {
+	width: 400px;
+	height: 300px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	opacity: .5;
+}
